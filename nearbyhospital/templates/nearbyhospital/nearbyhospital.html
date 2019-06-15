@@ -1,0 +1,12 @@
+{% extends 'nearbyhospitalbase.html' %}
+
+{% block head %}
+    <title>Nearby Hospital</title>
+{% endblock %}
+
+{% block body %}
+
+    <div id="map"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuBzeYkYimIquGG5KkIcB6vFmtHMUzDFo&signed_in=true&libraries=places&callback=initMap" async defer></script>
+
+{% endblock %}

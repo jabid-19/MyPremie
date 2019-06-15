@@ -1,0 +1,51 @@
+{% extends 'problemandsolutionbase.html' %}
+
+{% block head %}
+    <title>Problem and Solution</title>
+{% endblock %}
+
+{% block body %}
+
+
+
+<div>
+    <br><br>
+</div>
+
+    <div class="jumbotron text-center">
+      <div class="container">
+        <p> প্রি-ম্যাচিউর শিশুদের মধ্যে কিছু রোগ প্রায় ই দেখা যাই।  তার মধ্যে অন্যতম কিছু রোগ হচ্ছে Apnea(অ্যাপনিয়া), Bronchopulmonary Dysplasia (ব্রোংকোপ্লোননারি ডিসপ্লাসিয়া (বিপিডি)), Jaundice(জন্ডিস), Respiratory Syncytial Virus (RSV(রেসপিরেটরি সিনসিটিএল ভাইরাস), Intraventricular Hemorrhage(ইন্ট্রেনট্রিকুলার হ্যামারেজ), Respiratory distress syndrome( রেসপিরেটরি ডিস্ট্রেস সিনড্রোম), Retinopathy of Prematurity (ROP or Retrolental Fibroplasia) ইত্যাদি। </p>
+        <a href="https://en.wikipedia.org/wiki/Preterm_birth" class="btn btn-primary" target="_blank">আরো জানতে ক্লিক করুন </a>
+      </div>
+    </div>
+
+{% for item in items %}
+
+<div class="container">
+    <div class="list-group">
+        <h3 class="list-group-item active">{{ item.problemname }}</h3>
+        <p class="list-group-item list-group-item-info">সমস্যার বিবরণ</p>
+
+        <div class="well well-lg">
+            <p>{{ item.problemdetails }}</p>
+        </div>
+
+        <p class="list-group-item list-group-item-warning">সমস্যার লক্ষণ</p>
+
+        <div class="well">
+            <p>{{ item.problemsignandsymptom }}</p>
+        </div>
+
+        <p class="list-group-item list-group-item-success">সমস্যার সমাধান</p>
+
+        <div class="well">
+            <p>{{ item.solution }}</p>
+        </div>
+        <a href="{{ item.youtubeurl }}" class="btn btn-primary " target="_blank">আরো জানতে ক্লিক করুন </a>
+
+
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}
